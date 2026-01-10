@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JL Enterprise | EV & Power Solutions</title>
+    <meta name="description" content="JL Enterprise – Trusted retailer of E-Rickshaws, E-Scooters, Batteries, Inverters and Solar Solutions.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <h1>JL Enterprise</h1>
+    <p>EV Retailer • Battery • Inverter & Solar Solutions</p>
+</header>
+
+<!-- NAVIGATION -->
+<nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="products.html">Products</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="hero-text">
+        <h2>Powering the Future with Electric Solutions</h2>
+        <p>Trusted retailer of E-Rickshaws, E-Scooters, Batteries & Inverters</p>
+        
+    </div>
+</section>
+
+<!-- FEATURED PRODUCTS SLIDER -->
+<section class="services">
+    <h2>Our Featured Products</h2>
+
+    <div class="slider-container">
+        <button class="slide-btn left" onclick="slideLeft()">&#10094;</button>
+
+        <div class="slider" id="slider">
+
+            <div class="card">
+                <img src="images/toto.jpg" alt="E-Rickshaw">
+                <h3>E-Rickshaw</h3>
+                <p>Reliable electric E-Rickshaws with genuine spare support.</p>
+            </div>
+
+            <div class="card">
+                <img src="images/scooter.jpg" alt="Electric Scooter">
+                <h3>E-Scooters</h3>
+                <p>Eco-friendly electric scooters for daily commuting.</p>
+            </div>
+
+            <div class="card">
+                <img src="images/battery.jpg" alt="Vehicle Battery">
+                <h3>Vehicle Batteries</h3>
+                <p>High-quality batteries for vehicles and power backup.</p>
+            </div>
+
+            <div class="card">
+                <img src="images/inverter.jpg" alt="Home Inverter">
+                <h3>Home Inverter</h3>
+                <p>Reliable inverter & uninterrupted power solutions.</p>
+            </div>
+
+            <div class="card">
+                <img src="images/tyre.jpg" alt="Vehicle Tyres">
+                <h3>Tyres & Accessories</h3>
+                <p>Durable tyres and accessories for all vehicle types.</p>
+            </div>
+
+        </div>
+
+        <button class="slide-btn right" onclick="slideRight()">&#10095;</button>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 JL Enterprise | All Rights Reserved</p>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+const slider = document.getElementById("slider");
+
+function slideLeft() {
+    slider.scrollLeft -= slider.clientWidth;
+}
+
+function slideRight() {
+    slider.scrollLeft += slider.clientWidth;
+}
+
+// AUTO SLIDE
+setInterval(() => {
+    slider.scrollLeft += slider.clientWidth;
+    if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth) {
+        slider.scrollLeft = 0;
+    }
+}, 4000);
+</script>
+
+</body>
+</html>
